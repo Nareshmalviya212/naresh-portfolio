@@ -379,8 +379,7 @@ const workExperiences = {
 
 const openSource = {
   showGithubProfile: "true",
-
-  display: true
+  display: false
 };
 
 /* =========================
