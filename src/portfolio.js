@@ -1,389 +1,651 @@
-/* Change this file to get your personal Portfolio */
-
-// To change portfolio colors globally go to the  _globalColor.scss file
+/* Naresh Luhar - Personal Portfolio */
 
 import emoji from "react-easy-emoji";
-import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
+import splashAnimation from "./assets/lottie/splashAnimation";
 
-// Splash Screen
+/* =========================
+   Splash Screen
+========================= */
 
 const splashScreen = {
-  enabled: true, // set false to disable splash screen
+  enabled: true,
   animation: splashAnimation,
-  duration: 2000 // Set animation duration as per your animation
+  duration: 2000
 };
 
-// Summary And Greeting Section
+/* =========================
+   Summary And Greeting
+========================= */
 
 const illustration = {
-  animated: true // Set to false to use static SVG
+  animated: true
 };
 
 const greeting = {
-  username: "Saad Pasta",
-  title: "Hi all, I'm Saad",
+  username: "Naresh Luhar",
+
+  title: "Hi, I'm Naresh Luhar",
+
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks."
+    "GenAI Engineer with 3+ years of experience architecting production-grade multi-agent systems, enterprise RAG platforms, and real-time Voice AI. I specialize in LangGraph, LangChain, GPT-4, LLaMA, RAG, Agentic AI, MCP, multimodal AI, and AI workflow orchestration. 🚀"
   ),
-  resumeLink:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
-  displayGreeting: true // Set false to hide this section, defaults to true
+
+  resumeLink: "",
+
+  displayGreeting: true
 };
 
-// Social Media Links
+/* =========================
+   Social Media Links
+========================= */
 
 const socialMediaLinks = {
-  github: "https://github.com/saadpasta",
-  linkedin: "https://www.linkedin.com/in/saadpasta/",
-  gmail: "saadpasta70@gmail.com",
-  gitlab: "https://gitlab.com/saadpasta",
-  facebook: "https://www.facebook.com/saad.pasta7",
-  medium: "https://medium.com/@saadpasta",
-  stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
-  // Instagram, Twitter and Kaggle are also supported in the links!
-  // To customize icons and social links, tweak src/components/SocialMedia
-  display: true // Set true to display this section, defaults to false
+  github: "https://github.com/Nareshmalviya212",
+
+  linkedin:
+    "https://www.linkedin.com/in/naresh-luhar-8121a6205",
+
+  gmail: "malviyanaresh6219@gmail.com",
+
+  gitlab: "",
+  facebook: "",
+  medium: "",
+  stackoverflow: "",
+
+  display: true
 };
 
-// Skills Section
+/* =========================
+   Skills Section
+========================= */
 
 const skillsSection = {
-  title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  title: "What I Do",
+
+  subTitle:
+    "I BUILD PRODUCTION-GRADE GENERATIVE AI SYSTEMS THAT SOLVE REAL BUSINESS PROBLEMS",
+
   skills: [
     emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
+      "⚡ Build enterprise RAG platforms for document intelligence and knowledge retrieval"
     ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
+
     emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
+      "⚡ Design Agentic AI and Multi-Agent systems using LangGraph, LangChain and LLMs"
+    ),
+
+    emoji(
+      "⚡ Build real-time Voice AI systems with streaming STT, RAG, LLM and TTS pipelines"
+    ),
+
+    emoji(
+      "⚡ Develop multimodal AI solutions using OCR, vision-language models and LLMs"
+    ),
+
+    emoji(
+      "⚡ Build AI agents with tool calling, function calling and Model Context Protocol (MCP)"
+    ),
+
+    emoji(
+      "⚡ Evaluate and optimize RAG systems using RAGAS and Promptfoo"
+    ),
+
+    emoji(
+      "⚡ Fine-tune open-source LLMs using Hugging Face Transformers and PEFT/LoRA"
     )
   ],
 
-  /* Make Sure to include correct Font Awesome Classname to view your icon
-https://fontawesome.com/icons?d=gallery */
-
   softwareSkills: [
     {
-      skillName: "html-5",
-      fontAwesomeClassname: "fab fa-html5"
-    },
-    {
-      skillName: "css3",
-      fontAwesomeClassname: "fab fa-css3-alt"
-    },
-    {
-      skillName: "sass",
-      fontAwesomeClassname: "fab fa-sass"
-    },
-    {
-      skillName: "JavaScript",
-      fontAwesomeClassname: "fab fa-js"
-    },
-    {
-      skillName: "reactjs",
-      fontAwesomeClassname: "fab fa-react"
-    },
-    {
-      skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
-    },
-    {
-      skillName: "swift",
-      fontAwesomeClassname: "fab fa-swift"
-    },
-    {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
-    },
-    {
-      skillName: "sql-database",
-      fontAwesomeClassname: "fas fa-database"
-    },
-    {
-      skillName: "aws",
-      fontAwesomeClassname: "fab fa-aws"
-    },
-    {
-      skillName: "firebase",
-      fontAwesomeClassname: "fas fa-fire"
-    },
-    {
-      skillName: "python",
+      skillName: "Python",
       fontAwesomeClassname: "fab fa-python"
     },
     {
-      skillName: "docker",
+      skillName: "GPT-4",
+      fontAwesomeClassname: "fas fa-brain"
+    },
+    {
+      skillName: "LLaMA",
+      fontAwesomeClassname: "fas fa-robot"
+    },
+    {
+      skillName: "LangChain",
+      fontAwesomeClassname: "fas fa-link"
+    },
+    {
+      skillName: "LangGraph",
+      fontAwesomeClassname: "fas fa-project-diagram"
+    },
+    {
+      skillName: "CrewAI",
+      fontAwesomeClassname: "fas fa-users"
+    },
+    {
+      skillName: "Agno",
+      fontAwesomeClassname: "fas fa-cogs"
+    },
+    {
+      skillName: "HuggingFace",
+      fontAwesomeClassname: "fas fa-face-smile"
+    },
+    {
+      skillName: "Ollama",
+      fontAwesomeClassname: "fas fa-server"
+    },
+    {
+      skillName: "RAG",
+      fontAwesomeClassname: "fas fa-search"
+    },
+    {
+      skillName: "RAGAS",
+      fontAwesomeClassname: "fas fa-chart-line"
+    },
+    {
+      skillName: "Promptfoo",
+      fontAwesomeClassname: "fas fa-vial"
+    },
+    {
+      skillName: "FastAPI",
+      fontAwesomeClassname: "fas fa-server"
+    },
+    {
+      skillName: "PostgreSQL",
+      fontAwesomeClassname: "fas fa-database"
+    },
+    {
+      skillName: "FAISS",
+      fontAwesomeClassname: "fas fa-layer-group"
+    },
+    {
+      skillName: "ChromaDB",
+      fontAwesomeClassname: "fas fa-database"
+    },
+    {
+      skillName: "Docker",
       fontAwesomeClassname: "fab fa-docker"
+    },
+    {
+      skillName: "Git",
+      fontAwesomeClassname: "fab fa-git-alt"
+    },
+    {
+      skillName: "PyTorch",
+      fontAwesomeClassname: "fas fa-fire"
+    },
+    {
+      skillName: "TensorFlow",
+      fontAwesomeClassname: "fas fa-project-diagram"
+    },
+    {
+      skillName: "BERT",
+      fontAwesomeClassname: "fas fa-language"
+    },
+    {
+      skillName: "ResNet50",
+      fontAwesomeClassname: "fas fa-image"
+    },
+    {
+      skillName: "Selenium",
+      fontAwesomeClassname: "fas fa-globe"
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+
+  display: true
 };
 
-// Education Section
+/* =========================
+   Education
+========================= */
 
 const educationInfo = {
-  display: true, // Set false to hide this section, defaults to true
+  display: true,
+
   schools: [
     {
-      schoolName: "Harvard University",
-      logo: require("./assets/images/harvardLogo.png"),
-      subHeader: "Master of Science in Computer Science",
-      duration: "September 2017 - April 2019",
-      desc: "Participated in the research of XXX and published 3 papers.",
-      descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
+      schoolName: "ITvedant Institute, Mumbai",
+
+      /*
+       * Using an existing template image temporarily.
+       * We can replace this with the actual institute logo later.
+       */
+      logo: require("./assets/images/harvardLogo.jpg"),
+
+      subHeader: "Certification in Data Science and AI",
+
+      duration: "October 2021 - May 2022",
+
+      desc:
+        "Professional certification focused on Data Science and Artificial Intelligence.",
+
+      descBullets: []
     },
+
     {
-      schoolName: "Stanford University",
-      logo: require("./assets/images/stanfordLogo.png"),
-      subHeader: "Bachelor of Science in Computer Science",
-      duration: "September 2013 - April 2017",
-      desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
-      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
+      schoolName: "Bhupal Nobles University, Udaipur",
+
+      /*
+       * Using an existing template image temporarily.
+       * We can replace this with the actual university logo later.
+       */
+      logo: require("./assets/images/stanfordLogo.jpg"),
+
+      subHeader: "Bachelor of Computer Applications",
+
+      duration: "July 2018 - August 2021",
+
+      desc:
+        "Bachelor of Computer Applications with a foundation in computer science and software development.",
+
+      descBullets: []
     }
   ]
 };
 
-// Your top 3 proficient stacks/tech experience
+/* =========================
+   Technical Expertise
+========================= */
 
 const techStack = {
-  viewSkillBars: true, //Set it to true to show Proficiency Section
+  viewSkillBars: true,
+
   experience: [
     {
-      Stack: "Frontend/Design", //Insert stack or technology you have experience in
-      progressPercentage: "90%" //Insert relative proficiency in percentage
+      Stack: "Generative AI & Agentic AI",
+      progressPercentage: "95%"
     },
+
     {
-      Stack: "Backend",
-      progressPercentage: "70%"
+      Stack: "RAG & LLM Applications",
+      progressPercentage: "95%"
     },
+
     {
-      Stack: "Programming",
-      progressPercentage: "60%"
+      Stack: "Python & AI Backend Development",
+      progressPercentage: "90%"
     }
   ],
-  displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
+
+  displayCodersrank: false
 };
 
-// Work experience section
+/* =========================
+   Professional Experience
+========================= */
 
 const workExperiences = {
-  display: true, //Set it to true to show workExperiences Section
+  display: true,
+
   experience: [
     {
-      role: "Software Engineer",
-      company: "Facebook",
-      companylogo: require("./assets/images/facebookLogo.png"),
-      date: "June 2018 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      role: "GenAI Engineer",
+
+      company: "Logicloop",
+
+      companylogo: require("./assets/images/logicloop.png"),
+
+      date: "September 2025 - June 2026",
+
+      desc:
+        "Architected and developed production-grade Generative AI systems across fintech, manufacturing and real estate use cases.",
+
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Built an AI-powered email agent for Mswipe that automated customer complaint processing for payment, KYC and device issues, reducing manual support ticket creation time by an estimated 70%.",
+
+        "Developed a multimodal extraction pipeline processing emails, attachments and threads using OCR and LLMs to extract customer, device and issue details.",
+
+        "Integrated helpdesk APIs for automated ticket creation and designed missing-information workflows with automated email responses.",
+
+        "Architected FactoryGuard AI, a LangGraph-based multi-agent predictive maintenance platform with Health Monitoring, Root Cause Analysis and Maintenance Planning agents.",
+
+        "Designed a dual-RAG architecture over machine manuals, troubleshooting guides, historical failure records and maintenance SOPs to deliver explainable root-cause analysis and automate maintenance workflows.",
+
+        "Built a low-latency Real-Time Voice AI Agent using Pipecat and LiveKit with a streaming STT → RAG → OpenAI → TTS pipeline.",
+
+        "Designed real-estate knowledge retrieval workflows for live queries related to flats, pricing, amenities and locations, with call transcript storage for business analytics.",
+
+        "Architected a modular Enterprise Agentic RAG Platform using Docling and Unstructured for advanced enterprise document parsing.",
+
+        "Built end-to-end chunking, embedding and vector search pipelines using HuggingFace, Ollama and PostgreSQL.",
+
+        "Evaluated RAG pipeline performance using RAGAS and Promptfoo to measure answer quality, faithfulness and retrieval effectiveness.",
+
+        "Built an MCP-powered AI interface enabling natural-language interaction with a low-code platform through LLM-callable tools.",
+
+        "Implemented tool-calling workflows that translated natural-language requests into backend API operations for platform configuration and application creation.",
+
+        "Built an OCR Intelligence System for handwritten customer forms using Qwen2.5-VL and advanced prompt engineering.",
+
+        "Fine-tuned an open-source LLM using Hugging Face Transformers and PEFT/LoRA on a custom dataset containing 3,000+ instruction-response pairs for enterprise document Q&A."
       ]
     },
+
     {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
-      date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "AI Researcher",
+
+      company: "Konverge Technologies",
+
+      companylogo: require("./assets/images/konverge.jpg"),
+
+      date: "March 2024 - May 2025",
+
+      desc:
+        "Developed Generative AI, NLP, computer vision and document intelligence solutions for real-world business applications.",
+
+      descBullets: [
+        "Built a GenAI-powered financial RAG system using LangChain, GPT-4 and FAISS to extract real-time insights from financial news through natural-language queries.",
+
+        "Engineered a medical document intelligence pipeline using LLaMA and OCR to extract structured data from medical bills, reducing manual data entry by approximately 80%.",
+
+        "Developed and fine-tuned a ResNet50-based breast X-ray classification model achieving 91%+ accuracy for early-stage anomaly detection.",
+
+        "Built an OCR-driven analytics system processing garage bills to identify frequently replaced components and support inventory planning and demand forecasting.",
+
+        "Developed a domain-specific educational chatbot and no-code Q&A framework using TF-IDF for rapid deployment across multiple domains."
+      ]
     },
+
     {
-      role: "Software Engineer Intern",
-      company: "Airbnb",
-      companylogo: require("./assets/images/airbnbLogo.png"),
-      date: "Jan 2015 – Sep 2015",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "AI Developer",
+
+      company: "Cloudstrats Technologies",
+
+      companylogo: require("./assets/images/cloudstrats.png"),
+
+      date: "June 2022 - December 2023",
+
+      desc:
+        "Developed NLP, speech processing, document intelligence and machine learning solutions.",
+
+      descBullets: [
+        "Built multilingual NLP systems for text translation across 10+ Indian languages using LSTM-based models.",
+
+        "Developed GPT-2-based solutions for text generation and abstractive summarization.",
+
+        "Built a BERT-based sentiment analysis engine for large-scale social media data.",
+
+        "Designed a Hindi speech-to-text system with noise reduction for real-world audio environments.",
+
+        "Engineered intelligent document processing solutions to extract structured information from identity documents including Aadhaar, driving licences, passports and bills.",
+
+        "Built automated Selenium-based data scraping pipelines to curate datasets for computer vision applications."
+      ]
     }
   ]
 };
 
-/* Your Open Source Section to View Your Github Pinned Projects
-To know how to get github key look at readme.md */
+/* =========================
+   GitHub / Open Source
+========================= */
 
 const openSource = {
-  showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
-  display: true // Set false to hide this section, defaults to true
+  showGithubProfile: "true",
+
+  display: true
 };
 
-// Some big projects you have worked on
+/* =========================
+   Featured Projects
+========================= */
 
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  title: "Featured AI Projects",
+
+  subtitle:
+    "REAL-WORLD GENERATIVE AI, RAG, AGENTIC AI AND AUTOMATION SYSTEMS",
+
   projects: [
     {
       image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "http://saayahealth.com/"
-        }
-        //  you can add extra buttons here.
-      ]
+
+      projectName: "FactoryGuard AI",
+
+      projectDesc:
+        "Enterprise multi-agent predictive maintenance platform built with LangGraph. Orchestrates Health Monitoring, Root Cause Analysis and Maintenance Planning agents. Uses a dual-RAG architecture over machine manuals, troubleshooting guides, historical failure records and maintenance SOPs to provide explainable failure diagnosis and maintenance recommendations.",
+
+      footerLink: []
     },
+
     {
       image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "http://nextu.se/"
-        }
-      ]
+
+      projectName: "Enterprise Agentic RAG Platform",
+
+      projectDesc:
+        "Modular enterprise RAG platform for document intelligence and knowledge retrieval. Integrates Docling and Unstructured for document parsing, HuggingFace and Ollama for AI processing, and PostgreSQL for storage and vector search. RAGAS and Promptfoo are used for evaluation and optimization.",
+
+      footerLink: []
+    },
+
+    {
+      image: require("./assets/images/saayaHealthLogo.webp"),
+
+      projectName: "Real-Time Voice AI Agent",
+
+      projectDesc:
+        "Low-latency conversational Voice AI Agent built using Pipecat and LiveKit with a streaming STT → RAG → OpenAI → TTS pipeline. Designed for real-estate conversations around flats, pricing, amenities and locations, with call transcripts stored for analytics.",
+
+      footerLink: []
+    },
+
+    {
+      image: require("./assets/images/nextuLogo.webp"),
+
+      projectName: "Email AI Agent — Mswipe",
+
+      projectDesc:
+        "AI-powered email agent for automatically processing customer complaints related to payment, KYC and device issues. Uses OCR and LLMs to process emails, attachments and threads, extracts structured information and integrates with helpdesk APIs to automatically create support tickets.",
+
+      footerLink: []
+    },
+
+    {
+      image: require("./assets/images/saayaHealthLogo.webp"),
+
+      projectName: "AI Backend Interface — SolidX MCP System",
+
+      projectDesc:
+        "MCP-powered AI interface enabling natural-language interaction with a low-code platform. Exposes platform capabilities as LLM-callable tools and translates user requests into backend API operations for configuration and application creation.",
+
+      footerLink: []
+    },
+
+    {
+      image: require("./assets/images/nextuLogo.webp"),
+
+      projectName: "OCR Intelligence System — Reliance",
+
+      projectDesc:
+        "AI digitization system for handwritten customer forms from fuel stations. Uses Qwen2.5-VL and advanced prompt engineering to extract customer and vehicle information from noisy handwritten forms.",
+
+      footerLink: []
+    },
+
+    {
+      image: require("./assets/images/saayaHealthLogo.webp"),
+
+      projectName: "Custom LLM Fine-Tuning with LoRA",
+
+      projectDesc:
+        "Fine-tuned an open-source LLM using Hugging Face Transformers and PEFT/LoRA on a custom dataset containing 3,000+ instruction-response pairs created from enterprise documents for domain-specific document Q&A.",
+
+      footerLink: []
+    },
+
+    {
+      image: require("./assets/images/nextuLogo.webp"),
+
+      projectName: "ATOM — Personalized Health Chatbot",
+
+      projectDesc:
+        "Conversational AI assistant using a domain-specific RAG pipeline with LLM integration and memory management to provide context-aware responses.",
+
+      footerLink: []
+    },
+
+    {
+      image: require("./assets/images/saayaHealthLogo.webp"),
+
+      projectName: "Music Recommendation System",
+
+      projectDesc:
+        "Music recommendation engine using collaborative filtering to recommend songs based on user interaction history and mood-based clustering.",
+
+      footerLink: []
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+
+  display: true
 };
 
-// Achievement Section
-// Include certificates, talks etc
+/* =========================
+   Certifications
+========================= */
 
 const achievementSection = {
-  title: emoji("Achievements And Certifications 🏆 "),
+  title: emoji("Certifications & Professional Learning 🏆"),
+
   subtitle:
-    "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
+    "Certifications and professional learning across Artificial Intelligence, Generative AI and Responsible AI.",
 
   achievementsCards: [
     {
-      title: "Google Code-In Finalist",
+      title: "Microsoft Certified: Azure AI Fundamentals",
+
       subtitle:
-        "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
+        "Microsoft certification covering fundamental Artificial Intelligence concepts and Azure AI capabilities.",
+
       image: require("./assets/images/codeInLogo.webp"),
-      imageAlt: "Google Code-In Logo",
-      footerLink: [
-        {
-          name: "Certification",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
-        },
-        {
-          name: "Award Letter",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
-        },
-        {
-          name: "Google Code-in Blog",
-          url: "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html"
-        }
-      ]
-    },
-    {
-      title: "Google Assistant Action",
-      subtitle:
-        "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
-      image: require("./assets/images/googleAssistantLogo.webp"),
-      imageAlt: "Google Assistant Action Logo",
-      footerLink: [
-        {
-          name: "View Google Assistant Action",
-          url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
-        }
-      ]
+
+      imageAlt: "Microsoft Azure AI Fundamentals",
+
+      footerLink: []
     },
 
     {
-      title: "PWA Web App Developer",
-      subtitle: "Completed Certifcation from SMIT for PWA Web App Development",
+      title: "Introduction to Responsible AI",
+
+      subtitle:
+        "Professional learning focused on responsible and ethical approaches to developing and deploying AI systems.",
+
+      image: require("./assets/images/googleAssistantLogo.webp"),
+
+      imageAlt: "Responsible AI",
+
+      footerLink: []
+    },
+
+    {
+      title: "Complete Generative AI Course with LangChain and HuggingFace",
+
+      subtitle:
+        "Professional training focused on Generative AI application development using LangChain and HuggingFace.",
+
       image: require("./assets/images/pwaLogo.webp"),
-      imageAlt: "PWA Logo",
-      footerLink: [
-        {name: "Certification", url: ""},
-        {
-          name: "Final Project",
-          url: "https://pakistan-olx-1.firebaseapp.com/"
-        }
-      ]
+
+      imageAlt: "Generative AI with LangChain and HuggingFace",
+
+      footerLink: []
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+
+  display: true
 };
 
-// Blogs Section
+/* =========================
+   Blogs
+========================= */
 
 const blogSection = {
   title: "Blogs",
-  subtitle:
-    "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
-  displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
-  blogs: [
-    {
-      url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
-      title: "Win a Google Assistant Tshirt and $200 in Google Cloud Credits",
-      description:
-        "Do you want to win $200 and Google Assistant Tshirt by creating a Google Assistant Action in less then 30 min?"
-    },
-    {
-      url: "https://medium.com/@saadpasta/why-react-is-the-best-5a97563f423e",
-      title: "Why REACT is The Best?",
-      description:
-        "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
-    }
-  ],
-  display: true // Set false to hide this section, defaults to true
+
+  subtitle: "",
+
+  displayMediumBlogs: "false",
+
+  blogs: [],
+
+  display: false
 };
 
-// Talks Sections
+/* =========================
+   Talks
+========================= */
 
 const talkSection = {
-  title: "TALKS",
-  subtitle: emoji(
-    "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
-  ),
+  title: "Talks",
 
-  talks: [
-    {
-      title: "Build Actions For Google Assistant",
-      subtitle: "Codelab at GDG DevFest Karachi 2019",
-      slides_url: "https://bit.ly/saadpasta-slides",
-      event_url: "https://www.facebook.com/events/2339906106275053/"
-    }
-  ],
-  display: true // Set false to hide this section, defaults to true
+  subtitle: "",
+
+  talks: [],
+
+  display: false
 };
 
-// Podcast Section
+/* =========================
+   Podcast
+========================= */
 
 const podcastSection = {
   title: emoji("Podcast 🎙️"),
-  subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
 
-  // Please Provide with Your Podcast embeded Link
-  podcast: [
-    "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
-  ],
-  display: true // Set false to hide this section, defaults to true
+  subtitle: "",
+
+  podcast: [],
+
+  display: false
 };
 
-// Resume Section
+/* =========================
+   Resume
+========================= */
+
+/*
+ * We will enable this after adding your actual CV PDF
+ * to the project.
+ */
+
 const resumeSection = {
   title: "Resume",
-  subtitle: "Feel free to download my resume",
 
-  // Please Provide with Your Podcast embeded Link
-  display: true // Set false to hide this section, defaults to true
+  subtitle: "Download my resume",
+
+  display: false
 };
+
+/* =========================
+   Contact
+========================= */
 
 const contactInfo = {
-  title: emoji("Contact Me ☎️"),
+  title: emoji("Let's Build Something With AI 🤝"),
+
   subtitle:
-    "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+92-0000000000",
-  email_address: "saadpasta70@gmail.com"
+    "Have an AI project, automation idea, or technical challenge? Feel free to reach out. I'm always open to discussing interesting AI problems and building practical solutions.",
+
+  number: "+91 7357027318",
+
+  email_address: "malviyanaresh6219@gmail.com"
 };
 
-// Twitter Section
+/* =========================
+   Twitter
+========================= */
 
 const twitterDetails = {
-  userName: "twitter", //Replace "twitter" with your twitter username without @
-  display: true // Set true to display this section, defaults to false
+  userName: "",
+
+  display: false
 };
 
-const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+/* =========================
+   Hiring Status
+========================= */
+
+const isHireable = true;
+
+/* =========================
+   Export
+========================= */
 
 export {
   illustration,

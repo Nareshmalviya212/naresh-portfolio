@@ -3,26 +3,23 @@
 .main {
   width: 90%;
   padding: 20px 10px;
-  margin: 0px auto;
+  margin: 0 auto;
   margin-top: 4rem;
 }
+
 .greet-main {
   width: 90%;
   padding: 20px 10px;
-  margin: 0px auto;
+  margin: 0 auto;
   margin-top: 2rem;
 }
 
 .greeting-main {
   display: flex;
-}
-
-.subTitle {
-  color: $subTitle !important;
-}
-
-.greeting-main {
-  display: flex;
+  align-items: center;
+  min-height: 72vh;
+  position: relative;
+  gap: 50px;
 }
 
 .greeting-main > * {
@@ -30,33 +27,141 @@
   margin-bottom: 30px;
 }
 
-.empty-div {
-  margin-bottom: 40px;
+/* =========================
+   Left Content
+========================= */
+
+.greeting-text-div {
+  position: relative;
+  z-index: 2;
 }
+
+.greeting-text {
+  font-size: 64px;
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -2px;
+  color: $textColor !important;
+  margin-bottom: 25px;
+}
+
+.greeting-text::after {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 5px;
+  margin-top: 22px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #7c3aed, #06b6d4);
+}
+
+.greeting-text-p {
+  font-size: 22px;
+  line-height: 1.65;
+  max-width: 720px;
+  color: $subTitle !important;
+  margin-top: 25px;
+}
+
+/* Highlight important AI terms */
+
+.greeting-text-p strong {
+  color: $textColor !important;
+}
+
+/* =========================
+   Subtitle
+========================= */
+
+.subTitle {
+  color: $subTitle !important;
+}
+
+/* =========================
+   Social Icons + Buttons
+========================= */
 
 .button-greeting-div {
   display: flex;
-  margin-top: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 35px;
+  gap: 18px;
 }
+
 .download-link-button {
   text-decoration: none;
 }
 
-.greeting-text {
-  font-size: 70px;
-  line-height: 1.1;
-  color: $textColor !important;
+.button-greeting-div a {
+  transition: all 0.25s ease;
 }
 
-.greeting-text-p {
-  font-size: 30px;
-  line-height: 40px;
+.button-greeting-div a:hover {
+  transform: translateY(-3px);
+}
+
+/* =========================
+   Hero Image
+========================= */
+
+.greeting-image-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 480px;
+}
+
+.greeting-image-div::before {
+  content: "";
+  position: absolute;
+  width: 390px;
+  height: 390px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(124, 58, 237, 0.20),
+    rgba(6, 182, 212, 0.08),
+    transparent 70%
+  );
+  filter: blur(10px);
+  z-index: 0;
+}
+
+.greeting-image-div::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgba(124, 58, 237, 0.25);
+  border-radius: 50%;
+  z-index: 0;
 }
 
 .greeting-image-div > img {
   max-width: 100%;
   height: auto;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.4s ease;
 }
+
+.greeting-image-div > img:hover {
+  transform: translateY(-8px);
+}
+
+/* =========================
+   Empty Div
+========================= */
+
+.empty-div {
+  margin-bottom: 40px;
+}
+
+/* =========================
+   Wave Emoji
+========================= */
 
 .wave-emoji {
   animation-duration: 1.8s;
@@ -70,58 +175,425 @@
   0% {
     transform: rotate(0deg);
   }
+
   10% {
     transform: rotate(-10deg);
   }
+
   20% {
     transform: rotate(12deg);
   }
+
   30% {
     transform: rotate(-10deg);
   }
+
   40% {
     transform: rotate(9deg);
   }
+
   50% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(0deg);
   }
 }
 
-/* Media Query */
+/* =========================
+   Desktop
+========================= */
+
 @media (max-width: 1380px) {
   .greeting-text {
-    font-size: 50px;
+    font-size: 52px;
   }
+
   .greeting-text-p {
     font-size: 20px;
+    line-height: 1.55;
+  }
+
+  .greeting-image-div {
+    min-height: 420px;
   }
 }
-@media (max-width: 768px) {
-  .button-greeting-div {
-    justify-content: space-around;
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 1024px) {
+  .greeting-main {
+    gap: 25px;
   }
+
   .greeting-text {
-    font-size: 30px;
+    font-size: 45px;
+  }
+
+  .greeting-text-p {
+    font-size: 18px;
+  }
+
+  .greeting-image-div::before {
+    width: 320px;
+    height: 320px;
+  }
+
+  .greeting-image-div::after {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 768px) {
+  .main {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .greet-main {
+    width: 90%;
+    padding: 10px;
+    margin-top: 1rem;
+  }
+
+  .greeting-main {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    gap: 10px;
     text-align: center;
   }
+
+  .greeting-main > * {
+    margin-bottom: 15px;
+  }
+
+  .greeting-text {
+    font-size: 38px;
+    line-height: 1.15;
+    letter-spacing: -1px;
+    text-align: center;
+  }
+
+  .greeting-text::after {
+    margin: 18px auto 0;
+  }
+
+  .greeting-text-p {
+    font-size: 17px;
+    line-height: 1.55;
+    text-align: center;
+  }
+
+  .button-greeting-div {
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+  .greeting-image-div {
+    width: 100%;
+    min-height: 300px;
+    height: 300px;
+    margin-top: 10px;
+  }
+
+  .greeting-image-div::before {
+    width: 260px;
+    height: 260px;
+  }
+
+  .greeting-image-div::after {
+    width: 200px;
+    height: 200px;
+  }
+
+  .greeting-image-div > img {
+    max-width: 85%;
+  }
+}
+
+/* =========================
+   Small Mobile
+========================= */
+
+@media (max-width: 480px) {
+  .greeting-text {
+    font-size: 32px;
+  }
+
   .greeting-text-p {
     font-size: 16px;
-    line-height: normal;
-    text-align: center;
   }
-  .greeting-main {
-    display: block;
-  }
+
   .greeting-image-div {
-    height: 256px;
+    min-height: 250px;
+    height: 250px;
+  }
+
+  .greeting-image-div > img {
+    max-width: 90%;
   }
 }
+
+/* =========================
+   Very Small Screens
+========================= */
 
 @media (max-width: 320px) {
   .main {
     width: auto;
   }
+
+  .greeting-text {
+    font-size: 28px;
+  }
+}
+
+/* =========================================
+   Premium GenAI Hero
+========================================= */
+
+.greeting-content {
+  position: relative;
+}
+
+/* Small professional role label */
+
+.greeting-role {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 14px;
+  margin-bottom: 18px;
+
+  border: 1px solid rgba(124, 58, 237, 0.35);
+  border-radius: 30px;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  color: #a78bfa;
+  background: rgba(124, 58, 237, 0.08);
+}
+
+/* Technology stack */
+
+.greeting-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+
+.greeting-tech-stack span {
+  padding: 7px 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  color: $subTitle;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  transition: all 0.25s ease;
+}
+
+.greeting-tech-stack span:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(124, 58, 237, 0.55);
+
+  color: $textColor;
+}
+
+/* =========================================
+   Hero Buttons
+========================================= */
+
+.button-greeting-div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 14px;
+
+  margin-top: 30px;
+}
+
+/* Primary */
+
+.hero-primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 46px;
+
+  padding: 0 22px;
+
+  border-radius: 7px;
+
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #5b21b6
+  );
+
+  color: white !important;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition: all 0.25s ease;
+
+  box-shadow:
+    0 8px 25px rgba(124, 58, 237, 0.20);
+}
+
+.hero-primary-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px rgba(124, 58, 237, 0.35);
+}
+
+/* Secondary */
+
+.hero-secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 44px;
+
+  padding: 0 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 7px;
+
+  color: $textColor !important;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  transition: all 0.25s ease;
+}
+
+.hero-secondary-button:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(124, 58, 237, 0.6);
+
+  background: rgba(124, 58, 237, 0.08);
+}
+
+/* Contact text link */
+
+.hero-contact-link {
+  margin-left: 5px;
+
+  color: $subTitle !important;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: all 0.25s ease;
+}
+
+.hero-contact-link:hover {
+  color: $textColor !important;
+
+  transform: translateX(3px);
+}
+
+/* =========================================
+   Better Hero Position
+========================================= */
+
+.greeting-main {
+  align-items: center;
+}
+
+.greeting-text-div {
+  display: flex;
+  align-items: center;
+}
+
+.greeting-image-div {
+  transform: translateY(-5px);
+}
+
+/* =========================================
+   Tablet
+========================================= */
+
+@media (max-width: 1024px) {
+
+  .greeting-role {
+    font-size: 12px;
+  }
+
+  .greeting-tech-stack {
+    gap: 7px;
+  }
+
+  .greeting-tech-stack span {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+}
+
+/* =========================================
+   Mobile
+========================================= */
+
+@media (max-width: 768px) {
+
+  .greeting-role {
+    margin-bottom: 15px;
+  }
+
+  .greeting-tech-stack {
+    justify-content: center;
+
+    margin-top: 20px;
+  }
+
+  .button-greeting-div {
+    justify-content: center;
+
+    margin-top: 25px;
+  }
+
+  .hero-contact-link {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .greeting-image-div {
+    transform: none;
+  }
+
 }
