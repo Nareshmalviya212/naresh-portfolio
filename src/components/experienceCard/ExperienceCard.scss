@@ -1,18 +1,24 @@
 @import "../../_globalColor";
 
-.experience-card {
+.experience-card,
+.experience-card-dark {
   position: relative;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+  overflow: visible;
+}
+
+.experience-card {
   background-color: $lightBackground2;
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
-  border-radius: 10px;
   border: 1px solid $lightBorder1;
 }
 
 .experience-card-dark {
-  position: relative;
   background-color: $darkBackground;
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
-  border-radius: 10px;
   border: 1px solid $lightBorder1;
 }
 
@@ -21,17 +27,18 @@
 }
 
 .experience-banner {
+  position: relative;
+  width: 100%;
+  height: 11rem;
+  box-sizing: border-box;
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: 150%;
   background: $experienceCardBannerLG;
-  border-radius: 10px 10px 0px 0px;
-  -webkit-filter: blur(0px);
-  -moz-filter: blur(0px);
-  -o-filter: blur(0px);
-  -ms-filter: blur(0px);
-  filter: blur(0px);
-  height: 11rem;
+
+  border-radius: 10px 10px 0 0;
+
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -40,38 +47,50 @@
 .experience-blurred_div {
   position: absolute;
   background: $experienceCardBlurredDivLG;
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
+
   filter: blur(5px);
+
   height: 11rem;
+  width: 100%;
+
   top: 0;
   left: 0;
-  width: 100%;
-  border-radius: 10px 10px 0px 0px;
+
+  border-radius: 10px 10px 0 0;
 }
 
 .experience-div-company {
   position: absolute;
+
   background: transparent;
+
   height: 9rem;
+  width: 100%;
+
   top: 0;
   left: 0;
-  width: 100%;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .experience-text-company {
+  width: 100%;
+
   text-align: center;
+
   padding: 1.5rem;
   margin: 0;
+
   color: $lightBackground1;
+
   font-size: 25px;
-  text-align: center;
   font-weight: 700;
+
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -79,78 +98,214 @@
 
 .experience-roundedimg {
   position: absolute;
+
   object-fit: cover;
-  left: 0;
-  right: 0;
+
+  left: 50%;
   top: 7rem;
-  margin-left: auto;
-  margin-right: auto;
+
+  transform: translateX(-50%);
+
   width: 8rem;
   height: 8rem;
+
   box-shadow: 0 0.5rem 1rem $lightBoxShadowDarker;
+
   border-radius: 50%;
+
+  z-index: 5;
+}
+
+.experience-text-details {
+  position: relative;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 1.5rem;
+
+  margin-top: 2rem;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .experience-text-role {
   text-align: center;
+
   color: $textColor;
+
   font-weight: 700;
   font-size: 25px;
-  margin: 0px;
+
+  margin: 0;
   padding-top: 1.5rem;
+
   line-height: normal;
+
+  overflow-wrap: break-word;
 }
+
 .dark-mode-text {
   color: $textColorDark !important;
 }
+
 .experience-text-date {
   text-align: center;
+
   color: $textColor;
+
   font-size: 20px;
-  margin: 0px;
-  padding-top: 1rem;
   font-weight: 600;
+
+  margin: 0;
+  padding-top: 1rem;
 }
 
 .experience-text-desc {
   text-align: center;
+  overflow-wrap: break-word;
 }
 
-.experience-text-details {
-  padding: 1.5rem;
-  margin-top: 2rem;
+.experience-text-details ul {
+  padding-left: 1.2rem;
+  margin-bottom: 0;
 }
 
-/* Media Query */
+.experience-text-details li {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* =========================
+   Tablet / Laptop
+========================= */
 
 @media (max-width: 1380px) {
   .experience-text-role {
     padding-top: 0.5rem;
     font-size: 22px;
   }
+
   .experience-text-company {
     font-size: 22px;
   }
+
   .experience-text-date {
     font-size: 18px;
   }
+
   .experience-roundedimg {
     width: 6.5rem;
     height: 6.5rem;
   }
 }
 
+/* =========================
+   Mobile
+========================= */
+
 @media (max-width: 768px) {
-  .experience-text-role {
-    font-size: 22px;
+  .experience-card,
+  .experience-card-dark {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
   }
+
+  .experience-banner {
+    height: 10rem;
+  }
+
+  .experience-blurred_div {
+    height: 10rem;
+  }
+
+  .experience-div-company {
+    height: 8rem;
+    padding: 0 0.75rem;
+  }
+
   .experience-text-company {
-    font-size: 22px;
+    font-size: 20px;
+    padding: 1rem;
   }
+
+  .experience-roundedimg {
+    top: 6.2rem;
+
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .experience-text-details {
+    padding: 1.25rem;
+    margin-top: 2rem;
+  }
+
+  .experience-text-role {
+    font-size: 20px;
+    padding-top: 0.75rem;
+  }
+
   .experience-text-date {
+    font-size: 16px;
+    padding-top: 0.75rem;
+  }
+
+  .experience-text-desc {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
+
+/* =========================
+   Small Phones
+========================= */
+
+@media (max-width: 480px) {
+  .experience-card,
+  .experience-card-dark {
+    width: 100%;
+  }
+
+  .experience-banner {
+    height: 9rem;
+  }
+
+  .experience-blurred_div {
+    height: 9rem;
+  }
+
+  .experience-div-company {
+    height: 7rem;
+  }
+
+  .experience-text-company {
     font-size: 18px;
   }
+
+  .experience-roundedimg {
+    top: 5.5rem;
+
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+
+  .experience-text-details {
+    padding: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .experience-text-role {
+    font-size: 18px;
+  }
+
+  .experience-text-date {
+    font-size: 15px;
+  }
+
   .experience-text-desc {
-    font-size: 16px;
+    font-size: 14px;
   }
 }

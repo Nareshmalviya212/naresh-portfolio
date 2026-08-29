@@ -1,7 +1,8 @@
 .experience-cards-div {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: 1rem 1rem;
+  gap: 1rem;
+  width: 100%;
 }
 
 .experience-heading {
@@ -13,15 +14,23 @@
   display: flex;
   width: 90%;
   padding: 20px 10px;
-  margin: 0px auto;
+  margin: 0 auto;
   margin-top: 2rem;
+  box-sizing: border-box;
+
+  /* Prevent React Reveal from keeping the section invisible */
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .experience-container > * {
   flex: 1;
+  min-width: 0;
 }
 
-/* Media Query */
+/* =========================
+   Laptop / Tablet
+========================= */
 
 @media (max-width: 1380px) {
   .experience-heading {
@@ -29,9 +38,61 @@
   }
 }
 
+/* =========================
+   Mobile
+========================= */
+
 @media (max-width: 768px) {
+  .experience-container {
+    display: block;
+    width: 100%;
+    padding: 20px 16px;
+    margin-top: 1.5rem;
+    box-sizing: border-box;
+
+    /* Important for mobile */
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
   .experience-heading {
     font-size: 30px;
     text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .experience-cards-div {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .experience-cards-div > * {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+}
+
+/* =========================
+   Small Phones
+========================= */
+
+@media (max-width: 480px) {
+  .experience-container {
+    padding: 20px 12px;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .experience-heading {
+    font-size: 28px;
+  }
+
+  .experience-cards-div {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 }
