@@ -394,7 +394,7 @@ const bigProjects = {
 
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
+      image: require("./assets/images/factoryguard.jpg"),
 
       projectName: "FactoryGuard AI",
 
@@ -405,7 +405,7 @@ const bigProjects = {
     },
 
     {
-      image: require("./assets/images/nextuLogo.webp"),
+      image: require("./assets/images/rag.jpg"),
 
       projectName: "Enterprise Agentic RAG Platform",
 
@@ -416,7 +416,7 @@ const bigProjects = {
     },
 
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
+      image: require("./assets/images/voiceai.jpg"),
 
       projectName: "Real-Time Voice AI Agent",
 
@@ -427,7 +427,7 @@ const bigProjects = {
     },
 
     {
-      image: require("./assets/images/nextuLogo.webp"),
+      image: require("./assets/images/email.webp"),
 
       projectName: "Email AI Agent — Mswipe",
 
@@ -438,7 +438,7 @@ const bigProjects = {
     },
 
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
+      image: require("./assets/images/mcp.png"),
 
       projectName: "AI Backend Interface — SolidX MCP System",
 
@@ -449,7 +449,7 @@ const bigProjects = {
     },
 
     {
-      image: require("./assets/images/nextuLogo.webp"),
+      image: require("./assets/images/ocr.png"),
 
       projectName: "OCR Intelligence System — Reliance",
 
@@ -460,7 +460,7 @@ const bigProjects = {
     },
 
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
+      image: require("./assets/images/finetune.jpg"),
 
       projectName: "Custom LLM Fine-Tuning with LoRA",
 
@@ -471,7 +471,7 @@ const bigProjects = {
     },
 
     {
-      image: require("./assets/images/nextuLogo.webp"),
+      image: require("./assets/images/atom.webp"),
 
       projectName: "ATOM — Personalized Health Chatbot",
 
@@ -482,7 +482,7 @@ const bigProjects = {
     },
 
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
+      image: require("./assets/images/music.jpg"),
 
       projectName: "Music Recommendation System",
 
@@ -513,7 +513,7 @@ const achievementSection = {
       subtitle:
         "Microsoft certification covering fundamental Artificial Intelligence concepts and Azure AI capabilities.",
 
-      image: require("./assets/images/codeInLogo.webp"),
+      image: require("./assets/images/azure.jpg"),
 
       imageAlt: "Microsoft Azure AI Fundamentals",
 
@@ -539,7 +539,7 @@ const achievementSection = {
       subtitle:
         "Professional training focused on Generative AI application development using LangChain and HuggingFace.",
 
-      image: require("./assets/images/pwaLogo.webp"),
+      image: require("./assets/images/genail.webp"),
 
       imageAlt: "Generative AI with LangChain and HuggingFace",
 
